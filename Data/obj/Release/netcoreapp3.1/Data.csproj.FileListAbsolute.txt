@@ -1,0 +1,13 @@
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\bin\Release\netcoreapp3.1\Data.deps.json
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\bin\Release\netcoreapp3.1\Data.dll
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\bin\Release\netcoreapp3.1\Data.pdb
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\bin\Release\netcoreapp3.1\Model.dll
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\bin\Release\netcoreapp3.1\Model.pdb
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\obj\Release\netcoreapp3.1\Data.csproj.AssemblyReference.cache
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\obj\Release\netcoreapp3.1\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\obj\Release\netcoreapp3.1\Data.AssemblyInfoInputs.cache
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\obj\Release\netcoreapp3.1\Data.AssemblyInfo.cs
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\obj\Release\netcoreapp3.1\Data.csproj.CoreCompileInputs.cache
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\obj\Release\netcoreapp3.1\Data.csproj.CopyComplete
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\obj\Release\netcoreapp3.1\Data.dll
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Data\obj\Release\netcoreapp3.1\Data.pdb

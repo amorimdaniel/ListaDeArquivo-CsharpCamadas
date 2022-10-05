@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Model.Arquivo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert btn-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["Mensagem"]
+    </div>
+}
+
+<form action="/Arquivo/SalvarImagem" enctype="multipart/form-data" method="post">
+    <input class="btn btn-primary" type="file" name="arquivo" multiple />
+    <br />
+    <br />
+    <button class="btn btn-primary">Enviar Imagem</button>
+</form>
+
+<br />
+<br />
+
+<table class ="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Tipo de arquivo
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var arquivo in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => arquivo.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => arquivo.DadosTipo)
+                </td>
+                <td>
+                    <a class="btn btn-info" asp-action="Visualizar" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Visualizar</a>
+                    <a class="btn btn-danger" asp-action="Excluir" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,21 @@
+﻿@model Model.Usuario
+@{
+    ViewData["Title"] = "Alterar Senha";
+}
+
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert btn-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["Mensagem"]
+    </div>
+}
+
+<form asp-controller="AlterarSenha" asp-action="Alterar" method="">
+    <div class="mb-3">
+        <label for="senha" class="form-label">Nova senha</label>
+        <input type="password" asp-for="Senha" class="form-control" id="senha">
+        @Html.ValidationMessageFor(x => x.Senha)
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Alterar senha</button>
+</form>

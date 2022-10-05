@@ -1,0 +1,15 @@
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\bin\Release\net5.0\Filtros.deps.json
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\bin\Release\net5.0\Filtros.dll
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\bin\Release\net5.0\Filtros.pdb
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\bin\Release\net5.0\Model.dll
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\bin\Release\net5.0\Model.pdb
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\obj\Release\net5.0\Filtros.csproj.AssemblyReference.cache
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\obj\Release\net5.0\Filtros.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\obj\Release\net5.0\Filtros.AssemblyInfoInputs.cache
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\obj\Release\net5.0\Filtros.AssemblyInfo.cs
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\obj\Release\net5.0\Filtros.csproj.CoreCompileInputs.cache
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\obj\Release\net5.0\Filtros.csproj.CopyComplete
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\obj\Release\net5.0\Filtros.dll
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\obj\Release\net5.0\refint\Filtros.dll
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\obj\Release\net5.0\Filtros.pdb
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\Filtros\obj\Release\net5.0\ref\Filtros.dll
