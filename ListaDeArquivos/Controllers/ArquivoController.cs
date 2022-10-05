@@ -42,8 +42,13 @@ namespace ListaDeArquivos.Controllers
         }
         public IActionResult Visualizar(int IdArquivo)
         {
-            Arquivo arqui = _arquivos.AbrirArquivo(IdArquivo);
-            return File(arqui.Dados, arqui.DadosTipo);
+            Arquivo arquivo = _arquivos.AbrirArquivo(IdArquivo);
+            return File(arquivo.Dados, arquivo.DadosTipo);
+        }
+        public IActionResult Baixar(int IdArquivo)
+        {
+            Arquivo arquivo = _arquivos.AbrirArquivo(IdArquivo);
+            return File(arquivo.Dados, arquivo.DadosTipo, arquivo.Nome);
         }
         public IActionResult Excluir(int IdArquivo)
         {

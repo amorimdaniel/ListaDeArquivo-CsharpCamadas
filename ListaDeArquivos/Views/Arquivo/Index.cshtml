@@ -45,10 +45,10 @@
                 </td>
                 <td>
                     <a class="btn btn-info" asp-action="Visualizar" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Visualizar</a>
+                    <a download="" class="btn btn-success" asp-action="Baixar" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Baixar</a>
                     <a class="btn btn-danger" asp-action="Excluir" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Excluir</a>
                 </td>
             </tr>
         }
     </tbody>
-
 </table>
