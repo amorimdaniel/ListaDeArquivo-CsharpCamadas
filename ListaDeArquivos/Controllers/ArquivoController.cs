@@ -50,6 +50,8 @@ namespace ListaDeArquivos.Controllers
             Arquivo arquivo = _arquivos.AbrirArquivo(IdArquivo);
             return File(arquivo.Dados, arquivo.DadosTipo, arquivo.Nome);
         }
+
+        [HttpPost]
         public IActionResult Excluir(int IdArquivo)
         {
             _arquivos.ExcluirArquivo(IdArquivo);

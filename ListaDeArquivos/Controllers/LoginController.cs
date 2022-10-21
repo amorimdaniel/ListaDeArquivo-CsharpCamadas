@@ -24,6 +24,7 @@ namespace ListaDeArquivos.Controllers
         public IActionResult Index()
         {
             if (_sessao.BuscarSessaoDoUsuario() != null) return RedirectToAction("Index", "Arquivo");
+
             return View();
         }
         public IActionResult Sair()
@@ -35,17 +36,16 @@ namespace ListaDeArquivos.Controllers
         [HttpPost]
         public IActionResult Entrar(string email, string senha)
         {
-            if (email != "" && senha != "")
+            if (email != null && senha != null)
             {
-                Usuario user = _usuario.BuscarUsuario(email, senha);
+                var user = _usuario.BuscarUsuario(email, senha);
                 if (user != null)
                 {
                     _sessao.CriarSessaoDoUsuario(user);
                     return RedirectToAction("Index", "Arquivo");
                 }
-                TempData["Mensagem"] = $"USUÁRIO OU SENHA INVÁLIDOS";
             }
-            TempData["Mensagem"] = $"USUÁRIO OU SENHA INVÁLIDOS";
+            TempData["Mensagem"] = $"Usuário ou senhas inválidos";
             return View("Index");
         }
     }

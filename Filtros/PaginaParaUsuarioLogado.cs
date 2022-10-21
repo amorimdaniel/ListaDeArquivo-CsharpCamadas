@@ -16,7 +16,7 @@ namespace Filtros
             string sessaoUsuario = context.HttpContext.Session.GetString("sessaoUsuarioLogado");
             if (string.IsNullOrEmpty(sessaoUsuario))
             {
-                context.Result = new RedirectToRouteResult(new RouteValueDictionary { { "controler", "Login" }, { "action", "Index " } });
+                context.Result = new RedirectToRouteResult(new RouteValueDictionary { { "controller", "Login" }, { "action", "Index " } });
             }
             else
             {
@@ -24,7 +24,7 @@ namespace Filtros
 
                 if (usuario == null)
                 {
-                    context.Result = new RedirectToRouteResult(new RouteValueDictionary { { "controler", "Login" }, { "action", "Index " } });
+                    context.Result = new RedirectToRouteResult(new RouteValueDictionary { { "controller", "Login" }, { "action", "Index " } });
                 }
             }
             base.OnActionExecuting(context);

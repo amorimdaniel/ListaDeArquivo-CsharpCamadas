@@ -372,3 +372,5 @@ C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\bin\Debug\net5.0\
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\refint\ListaDeArquivos.dll
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\Razor\Views\RedefinirSenha\Index.cshtml.g.cs
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\Razor\Views\AlterarSenha\Index.cshtml.g.cs
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\Razor\Views\ListaDeGastos\Index.cshtml.g.cs
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\Razor\Views\AddGasto\Index.cshtml.g.cs

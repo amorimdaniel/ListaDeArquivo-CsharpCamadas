@@ -2,16 +2,10 @@
 
 <a class="btn btn-primary" asp-area="" asp-controller="Arquivo" asp-action="Index">@Model.Nome</a>
 
-<body>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" asp-area="" asp-controller="AlterarSenha" asp-action="Index">Alterar Senha</a>
-    </div>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-danger" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
-    </div>
-</body>
+<div container-fluid justify-content-start>
+    <a class="btn btn-primary" asp-area="" asp-controller="Arquivo" asp-action="Index">Lista de arquivos</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="ListaDeGastos" asp-action="Index">Lista de gastos</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="AlterarSenha" asp-action="Index">Alterar Senha</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
+</div>
 

@@ -1,0 +1,33 @@
+﻿@model Model.Gasto
+@{
+    Layout = "_LayoutDeslogado";
+    ViewData["Title"] = "Gasto";
+}
+
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["Mensagem"]
+    </div>
+}
+
+<form asp-controller="AddGasto" asp-action="CadastrarGasto" method="post">
+    <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição</label>
+        <input type="text" asp-for="Descricao" class="form-control" id="descricao">
+        @Html.ValidationMessageFor(x => x.Descricao)
+    </div>
+    <div class="mb-3">
+        <label for="data" class="form-label">Data</label>
+        <input type="text" asp-for="Data" class="form-control" id="data">
+        @Html.ValidationMessageFor(x => x.Data)
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Preço</label>
+        <input type="text" asp-for="Preco" class="form-control" id="preco">
+        @Html.ValidationMessageFor(x => x.Preco)
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Adicionar</button>
+    <a role="button" class="btn btn-secondary btn-block" asp-controller="Login" asp-action="Index">Voltar</a>
+</form>

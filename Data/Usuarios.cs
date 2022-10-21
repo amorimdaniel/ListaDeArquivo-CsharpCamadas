@@ -77,11 +77,10 @@ namespace Data
                         user.Email = (string)dataReader["Email"];
                     }
                 }
-                if (Email == user.Email && senha == user.Senha)
+                if (email != user.Email && senha != user.Senha)
                 {
-                    return user;
+                    return null;
                 }
-
                 return user;
             }
         }

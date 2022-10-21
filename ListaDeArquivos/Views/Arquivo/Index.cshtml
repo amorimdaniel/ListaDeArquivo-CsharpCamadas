@@ -22,7 +22,7 @@
 <br />
 <br />
 
-<table class ="table">
+<table class="table">
     <thead>
         <tr>
             <th>
@@ -44,9 +44,9 @@
                     @Html.DisplayFor(modelItem => arquivo.DadosTipo)
                 </td>
                 <td>
-                    <a class="btn btn-info" asp-action="Visualizar" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Visualizar</a>
-                    <a download="" class="btn btn-success" asp-action="Baixar" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Baixar</a>
-                    <a class="btn btn-danger" asp-action="Excluir" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Excluir</a>
+                    <a class="btn btn-info btn-sm" asp-action="Visualizar" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Visualizar</a>
+                    <a download="" class="btn btn-success btn-sm" asp-action="Baixar" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Baixar</a>
+                    <a class="btn btn-danger btn-sm" asp-action="Excluir" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Excluir</a>
                 </td>
             </tr>
         }

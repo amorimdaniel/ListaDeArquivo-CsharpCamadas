@@ -23,13 +23,15 @@ namespace ListaDeArquivos.Controllers
 
         public IActionResult Alterar(string senha)
         {
-            Usuario usuarioLogado = _sessao.BuscarSessaoDoUsuario();          
-            if(_usuarios.AtualizarSenha(senha, usuarioLogado.Email) == true)
+            Usuario usuarioLogado = _sessao.BuscarSessaoDoUsuario();
+            if (_usuarios.AtualizarSenha(senha, usuarioLogado.Email) == true)
             {
-                TempData["Mensagem"] = $"Senha Alterada";
-                return RedirectToAction("Index", "Arquivo");
+                TempData["Mensagem"] = $"Senha Alterada! Faça login novamente";
+                _sessao.RemoverSessaoUsuario();
+                return RedirectToAction("Index", "Login");
+
             }
-            TempData["Mensagem"] = $"E-mail INVÁLIDO";
+            TempData["Mensagem"] = $"E-mail Inválido";
             return View("Index");
         }
     }

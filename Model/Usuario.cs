@@ -16,6 +16,14 @@ namespace Model
         [Required(ErrorMessage = "Digite o e-mail")]
         public string Email { get; set; }
 
+        public Usuario()
+        {
+        }
 
+        public Usuario(string senha, string email)
+        {
+            Senha = senha;
+            Email = email;
+        }
     }
 }

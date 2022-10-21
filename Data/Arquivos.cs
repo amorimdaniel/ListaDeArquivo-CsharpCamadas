@@ -16,17 +16,17 @@ namespace Data
         Arquivo arquivo;
         public void CadastrarArquivo(IList<IFormFile> arquivos, int iDUsuario)
         {
-            IFormFile imagemCarregada = arquivos.FirstOrDefault();
-            if (imagemCarregada != null)
+            IFormFile arquivoCarregado = arquivos.FirstOrDefault();
+            if (arquivoCarregado != null)
             {
                 MemoryStream ms = new MemoryStream();
-                imagemCarregada.OpenReadStream().CopyTo(ms);
+                arquivoCarregado.OpenReadStream().CopyTo(ms);
 
                 arquivo = new Arquivo
                 {
-                    Nome = imagemCarregada.FileName,
+                    Nome = arquivoCarregado.FileName,
                     Dados = ms.ToArray(),
-                    DadosTipo = imagemCarregada.ContentType,
+                    DadosTipo = arquivoCarregado.ContentType,
                     IdUsuario = iDUsuario
                 };
 

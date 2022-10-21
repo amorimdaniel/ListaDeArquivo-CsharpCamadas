@@ -34,6 +34,7 @@ namespace ListaDeArquivos
             services.AddScoped<IArquivos, Arquivos>();
             services.AddScoped<IUsuarios, Usuarios>();
             services.AddScoped<IEmail, Email>();
+            services.AddScoped<IGastos, Gastos>();
 
             services.AddSession(o =>
             {

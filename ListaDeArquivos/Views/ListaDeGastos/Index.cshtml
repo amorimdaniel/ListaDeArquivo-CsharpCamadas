@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Model.Gasto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert btn-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["Mensagem"]
+    </div>
+}
+
+<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+    <a class="btn btn-primary" asp-area="" asp-controller="AddGasto" asp-action="Index">Adicionar gasto</a>
+</div>
+
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Descrição
+            </th>
+            <th>
+                Data
+            </th>
+            <th>
+                Preço
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var gasto in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => gasto.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => gasto.Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => gasto.Preco)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
