@@ -5,7 +5,3 @@
 $('.close-alert').click(function () {
     $('.alert').hide('hide');
 });
-
-$('.btn-excluir-arquivo').click(function () {
-        $('#ModalExcluirArquivo').modal();
-});

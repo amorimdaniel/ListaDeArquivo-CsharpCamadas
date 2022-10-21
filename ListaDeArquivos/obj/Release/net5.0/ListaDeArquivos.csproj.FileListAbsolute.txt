@@ -372,3 +372,5 @@ C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\ListaDeArquivos.pdb
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\ListaDeArquivos.genruntimeconfig.cache
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\ref\ListaDeArquivos.dll
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\Razor\Views\AddGasto\Index.cshtml.g.cs
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\Razor\Views\Gastos\Index.cshtml.g.cs

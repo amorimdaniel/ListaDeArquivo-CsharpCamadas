@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace ListaDeArquivos.Controllers
 {
-    public class UsuarioController : Controller
+    public class AddUsuarioController : Controller
     {
         private readonly IUsuarios _usuario;
 
-        public UsuarioController(IUsuarios usuarios)
+        public AddUsuarioController(IUsuarios usuarios)
         {
             _usuario = usuarios;
         }

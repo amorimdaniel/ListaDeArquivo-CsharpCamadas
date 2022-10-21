@@ -7,11 +7,11 @@ using Model;
 namespace ListaDeArquivos.Controllers
 {
     [PaginaParaUsuarioLogado]
-    public class ListaDeGastosController : Controller
+    public class GastosController : Controller
     {
         private readonly ISessao _sessao;
         private readonly IGastos _gastos;
-        public ListaDeGastosController(ISessao sessao, IGastos gastos)
+        public GastosController(ISessao sessao, IGastos gastos)
         {
             _sessao = sessao;
             _gastos = gastos;
