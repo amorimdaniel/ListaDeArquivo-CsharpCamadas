@@ -21,7 +21,7 @@ namespace Data
                 gasto = new Gasto
                 {
                     Descricao = gasto.Descricao,
-                    Data = gasto.Data,
+                    Data = DateTime.Now,
                     Preco = gasto.Preco,
                     IdUsuario = IdUsuario,
                 };
@@ -31,7 +31,7 @@ namespace Data
                     cmd.CommandText = @"insert into Gasto (Descricao, Data, Preco, IdUsuario) values (@Descricao, @Data, @Preco, @iDUsuario)";
                     cmd.Parameters.AddTipado("@Descricao", System.Data.SqlDbType.VarChar, gasto.Descricao);
                     cmd.Parameters.AddTipado("@Data", System.Data.SqlDbType.DateTime, gasto.Data);
-                    cmd.Parameters.AddTipado("@Preco", System.Data.SqlDbType.SmallMoney, gasto.Preco);
+                    cmd.Parameters.AddTipado("@Preco", System.Data.SqlDbType.Decimal, gasto.Preco);
                     cmd.Parameters.AddTipado("@IdUsuario", System.Data.SqlDbType.Int, IdUsuario);
                     cmd.ExecuteNonQuery();
                 }

@@ -27,7 +27,7 @@ namespace ListaDeArquivos.Controllers
                 if (_gastos.CadastrarGasto(gasto, usuarioLogado.IdUsuario) == true)
                 {
                     TempData["Mensagem"] = $"CADASTRADO COM SUCESSO";
-                    return RedirectToAction("Index", "ListaDeGastos");
+                    return RedirectToAction("Index", "Gastos");
                 }
                 else
                 {

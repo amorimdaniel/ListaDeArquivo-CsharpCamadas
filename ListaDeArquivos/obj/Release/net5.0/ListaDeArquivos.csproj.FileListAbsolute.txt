@@ -360,7 +360,6 @@ C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\Razor\Views\Shared\_LayoutDeslogado.cshtml.g.cs
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\Razor\Views\Usuario\Index.cshtml.g.cs
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\ListaDeArquivos.RazorTargetAssemblyInfo.cache
@@ -374,3 +373,4 @@ C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\ref\ListaDeArquivos.dll
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\Razor\Views\AddGasto\Index.cshtml.g.cs
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\Razor\Views\Gastos\Index.cshtml.g.cs
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Release\net5.0\Razor\Views\AddUsuario\Index.cshtml.g.cs

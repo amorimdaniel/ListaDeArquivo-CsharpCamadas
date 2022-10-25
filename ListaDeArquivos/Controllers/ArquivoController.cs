@@ -29,12 +29,28 @@ namespace ListaDeArquivos.Controllers
         {
             Usuario usuarioLogado = _sessao.BuscarSessaoDoUsuario();
             var arquivos = _arquivos.ListarArquivoPorUsuario(usuarioLogado.IdUsuario);
-            return View(arquivos);   
+            return View(arquivos);
         }
 
         [HttpPost]
         public IActionResult SalvarImagem(IList<IFormFile> arquivo)
         {
+            if(arquivo == null)
+            {
+                TempData["Mensagem"] = $"Erro - Selecione um arquivo";
+                return RedirectToAction("Index");
+            }
+            if (arquivo.Count != 1)
+            {
+                TempData["Mensagem"] = $"Erro - Selecione apenas um arquivo";
+                return RedirectToAction("Index");
+            }
+            if(arquivo[0].Length >= 100000)
+            {
+                TempData["Mensagem"] = $"Erro - Tamanho do arquivo é muito grande";
+                return RedirectToAction("Index");
+            }
+
             Usuario usuarioLogado = _sessao.BuscarSessaoDoUsuario();
             _arquivos.CadastrarArquivo(arquivo, usuarioLogado.IdUsuario);
             return RedirectToAction("Index");
@@ -51,10 +67,9 @@ namespace ListaDeArquivos.Controllers
             return File(arquivo.Dados, arquivo.DadosTipo, arquivo.Nome);
         }
 
-        [HttpPost]
-        public IActionResult Excluir(int IdArquivo)
+        public IActionResult Apagar(int Id)
         {
-            _arquivos.ExcluirArquivo(IdArquivo);
+            _arquivos.ExcluirArquivo(Id);
             return RedirectToAction("Index");
         }
     }

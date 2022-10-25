@@ -77,7 +77,7 @@ namespace Data
                         user.Email = (string)dataReader["Email"];
                     }
                 }
-                if (email != user.Email && senha != user.Senha)
+                if (email != user.Email || senha != user.Senha)
                 {
                     return null;
                 }

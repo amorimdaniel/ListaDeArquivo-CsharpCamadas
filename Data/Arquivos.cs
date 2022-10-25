@@ -15,7 +15,7 @@ namespace Data
         readonly SqlCommand cmd = new SqlCommand();
         Arquivo arquivo;
         public void CadastrarArquivo(IList<IFormFile> arquivos, int iDUsuario)
-        {
+        { 
             IFormFile arquivoCarregado = arquivos.FirstOrDefault();
             if (arquivoCarregado != null)
             {
