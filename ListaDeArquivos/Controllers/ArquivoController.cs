@@ -35,26 +35,9 @@ namespace ListaDeArquivos.Controllers
         [HttpPost]
         public IActionResult SalvarImagem(IList<IFormFile> arquivo)
         {
-            if(arquivo == null || arquivo.Count == 0)
-            {
-                TempData["Mensagem"] = $"Erro - Selecione um arquivo";
-                return RedirectToAction("Index");
-            }
-            if (arquivo.Count != 1)
-            {
-                TempData["Mensagem"] = $"Erro - Selecione apenas um arquivo";
-                return RedirectToAction("Index");
-            }
-            if(arquivo[0].Length >= 100000)
-            {
-                TempData["Mensagem"] = $"Erro - Tamanho do arquivo é muito grande";
-                return RedirectToAction("Index");
-            }
-
             Usuario usuarioLogado = _sessao.BuscarSessaoDoUsuario();
-            _arquivos.CadastrarArquivo(arquivo, usuarioLogado.IdUsuario);
+            TempData["Mensagem"] = _arquivos.CadastrarArquivo(arquivo, usuarioLogado.IdUsuario);
             return RedirectToAction("Index");
-
         }
         public IActionResult Visualizar(int IdArquivo)
         {

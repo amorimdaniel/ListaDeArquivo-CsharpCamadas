@@ -43,7 +43,7 @@
                     @Html.DisplayFor(modelItem => gasto.Data)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => gasto.Preco)
+                  R$@Html.DisplayFor(modelItem => gasto.Preco)
                 </td>
                 <td>
                     <a class="btn btn-warning btn-sm" asp-route-id="@gasto.IdGasto" asp-controller="Gasto" asp-action="Apagar" target="_blank">Apagar</a>
@@ -52,3 +52,14 @@
         }
     </tbody>
 </table>
+
+<div class="btn btn-primary">
+   Total R$ @{
+        decimal total = 0;
+        @foreach (var gasto in Model)
+        {
+            total = total + gasto.Preco;
+        }
+        @total.ToString("F2")
+    }
+</div>
