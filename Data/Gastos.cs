@@ -42,7 +42,12 @@ namespace Data
 
         public void ExcluirGasto(int id)
         {
-            throw new NotImplementedException();
+            using (cmd.Connection = conexao.conectar())
+            {
+                cmd.CommandText = @"delete from Gasto where IdGasto=@IdGasto";
+                cmd.Parameters.AddWithValue("@IdGasto", id);
+                cmd.ExecuteNonQuery();
+            }
         }
 
         public IEnumerable<Gasto> ListarGastoPorUsuario(int IdUsuario)
@@ -64,12 +69,14 @@ namespace Data
                 {
                     while (dataReader.Read())
                     {
-                        gastos = new Gasto();
-                        gastos.IdGasto = (int)dataReader["IdGasto"];
-                        gastos.Descricao = (string)dataReader["Descricao"];
-                        gastos.Data = (DateTime)dataReader["Data"];
-                        gastos.Preco = (decimal)dataReader["Preco"];
-                        gastos.IdUsuario = (int)dataReader["IdUsuario"];
+                        gastos = new Gasto
+                        {
+                            IdGasto = (int)dataReader["IdGasto"],
+                            Descricao = (string)dataReader["Descricao"],
+                            Data = (DateTime)dataReader["Data"],
+                            Preco = (decimal)dataReader["Preco"],
+                            IdUsuario = (int)dataReader["IdUsuario"]
+                        };
                         ListaGastos.Add(gastos);
                     }
                 }

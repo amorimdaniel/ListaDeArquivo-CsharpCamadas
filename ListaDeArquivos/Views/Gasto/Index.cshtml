@@ -45,6 +45,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => gasto.Preco)
                 </td>
+                <td>
+                    <a class="btn btn-warning btn-sm" asp-route-id="@gasto.IdGasto" asp-controller="Gasto" asp-action="Apagar" target="_blank">Apagar</a>
+                </td>
             </tr>
         }
     </tbody>

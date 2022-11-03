@@ -35,7 +35,7 @@ namespace ListaDeArquivos.Controllers
         [HttpPost]
         public IActionResult SalvarImagem(IList<IFormFile> arquivo)
         {
-            if(arquivo == null)
+            if(arquivo == null || arquivo.Count == 0)
             {
                 TempData["Mensagem"] = $"Erro - Selecione um arquivo";
                 return RedirectToAction("Index");

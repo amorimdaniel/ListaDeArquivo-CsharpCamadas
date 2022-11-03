@@ -1,10 +1,12 @@
 ﻿using Data;
+using Filtros;
 using Helper;
 using Microsoft.AspNetCore.Mvc;
 using Model;
 
 namespace ListaDeArquivos.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class AddGastoController : Controller
     {
         private readonly ISessao _sessao;
@@ -27,7 +29,7 @@ namespace ListaDeArquivos.Controllers
                 if (_gastos.CadastrarGasto(gasto, usuarioLogado.IdUsuario) == true)
                 {
                     TempData["Mensagem"] = $"CADASTRADO COM SUCESSO";
-                    return RedirectToAction("Index", "Gastos");
+                    return RedirectToAction("Index", "Gasto");
                 }
                 else
                 {

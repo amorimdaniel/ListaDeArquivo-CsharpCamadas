@@ -7,11 +7,11 @@ using Model;
 namespace ListaDeArquivos.Controllers
 {
     [PaginaParaUsuarioLogado]
-    public class GastosController : Controller
+    public class GastoController : Controller
     {
         private readonly ISessao _sessao;
         private readonly IGastos _gastos;
-        public GastosController(ISessao sessao, IGastos gastos)
+        public GastoController(ISessao sessao, IGastos gastos)
         {
             _sessao = sessao;
             _gastos = gastos;
@@ -21,6 +21,11 @@ namespace ListaDeArquivos.Controllers
             Usuario usuarioLogado = _sessao.BuscarSessaoDoUsuario();
             var gasto = _gastos.ListarGastoPorUsuario(usuarioLogado.IdUsuario);
             return View(gasto);
+        }
+        public IActionResult Apagar(int Id)
+        {
+            _gastos.ExcluirGasto(Id);
+            return RedirectToAction("Index");
         }
         public IActionResult Total()
         {
