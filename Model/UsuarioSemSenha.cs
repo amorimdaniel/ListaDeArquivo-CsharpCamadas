@@ -10,6 +10,7 @@ namespace Model
 
         [EmailAddress(ErrorMessage = "E-mail informado inválido")]
         [Required(ErrorMessage = "Digite o e-mail")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
     }
