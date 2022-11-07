@@ -12,10 +12,9 @@ namespace Data
     {
         readonly Conexao conexao = new Conexao();
         readonly SqlCommand cmd = new SqlCommand();
-        Gasto gastos;
-        public bool CadastrarGasto(Gasto gasto, int IdUsuario)
+        public string CadastrarGasto(Gasto gasto, int IdUsuario)
         {
-            if (gasto != null)
+            if (gasto.Descricao != null && IdUsuario != 0)
             {
 
                 gasto = new Gasto
@@ -35,9 +34,9 @@ namespace Data
                     cmd.Parameters.AddTipado("@IdUsuario", System.Data.SqlDbType.Int, IdUsuario);
                     cmd.ExecuteNonQuery();
                 }
-                return true;
+                return "Cadastrado com sucesso";
             }
-            return false;
+            return "Erro";
         }
 
         public void ExcluirGasto(int id)
@@ -52,6 +51,8 @@ namespace Data
 
         public IEnumerable<Gasto> ListarGastoPorUsuario(int IdUsuario)
         {
+            Gasto gastos;
+
             List<Gasto> ListaGastos = new List<Gasto>();
 
             var listAnterior = ListaGastos as IDisposable;

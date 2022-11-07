@@ -8,7 +8,7 @@ namespace Data
 {
     public interface IGastos
     {
-        bool CadastrarGasto(Gasto gasto, int IdUsuario);
+        string CadastrarGasto(Gasto gasto, int IdUsuario);
         void ExcluirGasto(int id);
         decimal TotalGasto();
         IEnumerable<Gasto> ListarGastoPorUsuario(int IdUsuario);

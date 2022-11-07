@@ -26,17 +26,14 @@ namespace ListaDeArquivos.Controllers
             if (ModelState.IsValid)
             {
                 Usuario usuarioLogado = _sessao.BuscarSessaoDoUsuario();
-                if (_gastos.CadastrarGasto(gasto, usuarioLogado.IdUsuario) == true)
-                {
-                    TempData["Mensagem"] = $"CADASTRADO COM SUCESSO";
-                    return RedirectToAction("Index", "Gasto");
-                }
-                else
-                {
-                    TempData["Mensagem"] = $"erro";
-                }
+                TempData["Mensagem"] = _gastos.CadastrarGasto(gasto, usuarioLogado.IdUsuario);
+                return RedirectToAction("Index", "Gasto");
             }
-            return View("Index");
+            else
+            {
+                return View("Index");
+            }
+
         }
     }
 }
