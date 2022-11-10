@@ -8,7 +8,7 @@ namespace Data
         SqlConnection con = new SqlConnection();
         public Conexao()
         {
-            con.ConnectionString = @"Server=tcp:cloud-arquivo.database.windows.net,1433;Initial Catalog=DB_Arquivos;Persist Security Info=False;User ID=sqluser;Password=1995@moriM;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            con.ConnectionString = @"Data Source=LAPTOP-1A83C5S1\SQLSERVER;Initial Catalog=DB_Arquivos;Integrated Security=True";
         }
 
         public SqlConnection conectar(){

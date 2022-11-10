@@ -374,3 +374,4 @@ C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\Razor\Views\AddGasto\Index.cshtml.g.cs
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\Razor\Views\AddUsuario\Index.cshtml.g.cs
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\Razor\Views\Gasto\Index.cshtml.g.cs
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\Razor\Views\Game\Index.cshtml.g.cs
