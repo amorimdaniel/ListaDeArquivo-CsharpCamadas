@@ -50,9 +50,23 @@
                     <a download="" class="btn btn-success btn-sm" asp-action="Baixar" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Baixar</a>
                 </td>
                 <td>
-                    <a class="btn btn-warning btn-sm" asp-route-id="@arquivo.IdArquivo" asp-controller="Arquivo" asp-action="Apagar" target="_blank">Apagar</a>
+                    <a href="javascript:" arquivo-id="@arquivo.IdArquivo" class="btn btn-danger btn-sm btn-abrirModal">Apagar</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<div class="modal" id="modalAbrir" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Deseja realmente apagar?</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-secondary close btn-modalApagar btn-recarregar" data-dismiss="modal">Apagar</button>
+            </div>
+        </div>
+    </div>
+</div>

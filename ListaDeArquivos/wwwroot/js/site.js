@@ -5,3 +5,19 @@
 $('.close-alert').click(function () {
     $('.alert').hide('hide');
 });
+
+
+$('.btn-abrirModal').click(function () {
+    var arquivoId = $(this).attr('arquivo-id')
+    $('#modalAbrir').modal();
+    $('.btn-modalApagar').click(function () {
+        $.ajax({
+            type: 'DELETE',
+            url: '/Arquivo/Apagar/' + arquivoId,
+        });
+    });
+});
+
+$('.btn-recarregar').click(function () {
+    location.reload()
+});
