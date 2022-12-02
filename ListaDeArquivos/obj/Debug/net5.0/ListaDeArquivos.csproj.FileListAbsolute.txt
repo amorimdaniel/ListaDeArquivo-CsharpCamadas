@@ -375,3 +375,8 @@ C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\Razor\Views\AddUsuario\Index.cshtml.g.cs
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\Razor\Views\Gasto\Index.cshtml.g.cs
 C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\Razor\Views\Game\Index.cshtml.g.cs
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\staticwebassets\ListaDeArquivos.StaticWebAssets.Pack.cache
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\staticwebassets\msbuild.ListaDeArquivos.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\staticwebassets\msbuild.build.ListaDeArquivos.props
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.ListaDeArquivos.props
+C:\Users\dan-a\source\repos\ProjetoListaDeDocs\ListaDeArquivos\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.ListaDeArquivos.props

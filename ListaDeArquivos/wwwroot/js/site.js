@@ -15,6 +15,7 @@ $('.btn-abrirModal').click(function () {
             type: 'DELETE',
             url: '/Arquivo/Apagar/' + arquivoId,
         });
+        location.reload()
     });
 });
 
