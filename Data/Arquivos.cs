@@ -19,17 +19,17 @@ namespace Data
 
             if (arquivo == null || arquivo.Count == 0)
             {
-                return "Erro - Selecione um arquivo";
+                return "Arquivo não selecionado";
 
             }
             if (arquivo.Count != 1)
             {
-                return "Erro - Selecione apenas um arquivo";
+                return "Selecione apenas um arquivo";
 
             }
             if (arquivo[0].Length >= 100000)
             {
-                return "Erro - Tamanho do arquivo é muito grande";
+                return "Arquivo muito grande";
             }
 
             IFormFile arquivoCarregado = arquivo.FirstOrDefault();

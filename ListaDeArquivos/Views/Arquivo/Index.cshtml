@@ -4,12 +4,21 @@
     ViewData["Title"] = "Index";
 }
 
-@if (TempData["Mensagem"] != null)
-{
-    <div class="alert btn-warning text-center" role="alert">
-        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
-        @TempData["Mensagem"]
-    </div>
+@{
+    if ((string)TempData["Mensagem"] == "Arquivo não selecionado" || (string)TempData["Mensagem"] == "Selecione apenas um arquivo" || (string)TempData["Mensagem"] == "Arquivo muito grande")
+    {
+        <div class="alert btn-danger text-center" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+            @TempData["Mensagem"]
+        </div>
+    }
+    if ((string)TempData["Mensagem"] == "Enviado com sucesso")
+    {
+        <div class="alert btn-success text-center" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+            @TempData["Mensagem"]
+        </div>
+    }
 }
 
 <form action="/Arquivo/SalvarImagem" enctype="multipart/form-data" method="post">
@@ -44,7 +53,7 @@
                     @Html.DisplayFor(modelItem => arquivo.DadosTipo)
                 </td>
                 <td>
-                    <a class="btn btn-info btn-sm" asp-action="Visualizar" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Visualizar</a>  
+                    <a class="btn btn-info btn-sm" asp-action="Visualizar" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Visualizar</a>
                 </td>
                 <td>
                     <a download="" class="btn btn-success btn-sm" asp-action="Baixar" asp-route-IdArquivo="@arquivo.IdArquivo" target="_blank">Baixar</a>
