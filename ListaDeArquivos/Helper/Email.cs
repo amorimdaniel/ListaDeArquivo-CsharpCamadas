@@ -18,7 +18,7 @@ namespace ListaDeArquivos.Helper
         public bool Enviar(string email)
         {
             Random aleatorio = new Random();
-            string Senha = Convert.ToString(aleatorio.Next());
+            string Senha = Convert.ToString(aleatorio.Next(1000,2000));
 
             MailMessage mail = new MailMessage()
             {

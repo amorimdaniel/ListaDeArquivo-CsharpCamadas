@@ -46,7 +46,7 @@
                   R$@Html.DisplayFor(modelItem => gasto.Preco)
                 </td>
                 <td>
-                    <a class="btn btn-warning btn-sm" asp-route-id="@gasto.IdGasto" asp-controller="Gasto" asp-action="Apagar" target="_blank">Apagar</a>
+                    <a href="javascript:" gasto-id="@gasto.IdGasto" class="btn btn-danger btn-sm btn-abrirModalGasto">Apagar</a>
                 </td>
             </tr>
         }
@@ -60,6 +60,19 @@
         {
             total = total + gasto.Preco;
         }
-        @total.ToString("F2")
+        @total.ToString("F2");
     }
+</div>
+<div class="modal" id="modalAbrir" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Deseja realmente apagar?</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger btn-modalApagar btn-recarregar" data-dismiss="modal">Apagar</button>
+            </div>
+        </div>
+    </div>
 </div>

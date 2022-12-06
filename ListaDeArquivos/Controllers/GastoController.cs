@@ -30,7 +30,7 @@ namespace ListaDeArquivos.Controllers
         public IActionResult Total()
         {
             Usuario usuarioLogado = _sessao.BuscarSessaoDoUsuario();
-            var total = _gastos.TotalGasto();
+            var total = _gastos.TotalGasto(usuarioLogado.IdUsuario);
             return View(total);
         }
     }

@@ -85,11 +85,12 @@ namespace Data
             }
         }
 
-        public decimal TotalGasto()
+        public decimal TotalGasto(int IdUsuario)
         {
             using (cmd.Connection = conexao.conectar())
             {
-                cmd.CommandText = @"select sum(preco) from gasto";
+                cmd.CommandText = @"select sum(preco) from gasto where idUsuario=@IdUsuario";
+                cmd.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                 cmd.ExecuteNonQuery();
                 decimal total = 0; 
                 using (SqlDataReader dataReader = cmd.ExecuteReader())

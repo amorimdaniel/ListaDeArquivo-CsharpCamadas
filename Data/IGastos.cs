@@ -10,7 +10,7 @@ namespace Data
     {
         string CadastrarGasto(Gasto gasto, int IdUsuario);
         void ExcluirGasto(int id);
-        decimal TotalGasto();
+        decimal TotalGasto(int IdUsuario);
         IEnumerable<Gasto> ListarGastoPorUsuario(int IdUsuario);
     }
 }

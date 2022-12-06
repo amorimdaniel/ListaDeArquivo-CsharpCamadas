@@ -7,13 +7,25 @@ $('.close-alert').click(function () {
 });
 
 
-$('.btn-abrirModal').click(function () {
+$('.btn-abrirModalArquivo').click(function () {
     var arquivoId = $(this).attr('arquivo-id')
     $('#modalAbrir').modal();
     $('.btn-modalApagar').click(function () {
         $.ajax({
             type: 'DELETE',
             url: '/Arquivo/Apagar/' + arquivoId,
+        });
+        location.reload()
+    });
+});
+
+$('.btn-abrirModalGasto').click(function () {
+    var gastoId = $(this).attr('gasto-id')
+    $('#modalAbrir').modal();
+    $('.btn-modalApagar').click(function () {
+        $.ajax({
+            type: 'DELETE',
+            url: '/Gasto/Apagar/' + gastoId,
         });
         location.reload()
     });
