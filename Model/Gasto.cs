@@ -10,14 +10,13 @@ namespace Model
     {
         public int IdGasto { get; set; }
 
-        [Required(ErrorMessage = "{0} Necessário")]
+        [Required(ErrorMessage = "Descrição Necessário")]
         [StringLength(60, MinimumLength = 3, ErrorMessage = "Tamanho do {0} precisa ser entre {2} e {1}")]
         public string Descricao { get; set; }
         public DateTime Data { get; set; }
 
-        [Required(ErrorMessage = "{0} Necessário")]
+        [Required(ErrorMessage = "Preço Necessário")]
         [Range(1.0, 50000.0, ErrorMessage = "{0} deve ser entre {1} e {2}")]
-        [Display(Name = "Preço")]
         [DisplayFormat(DataFormatString = "{0:f2}")]
         public decimal Preco { get; set; }
         public int IdUsuario { get; set; }
